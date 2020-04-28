@@ -1,4 +1,5 @@
 # Create specified number of articles for Hugo benchmarks
+# Create the output directory before running
 
 from datetime import datetime
 import random
@@ -7,7 +8,7 @@ from sys import argv
 
 def generateWord():
     length = random.randint(1, 10)
-    word = ''.join(random.choice(string.letters) for _ in range(length))
+    word = ''.join(random.choice(string.ascii_letters) for _ in range(length))
     return word
     
 def generateSentence(words):
